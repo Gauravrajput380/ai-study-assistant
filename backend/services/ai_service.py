@@ -55,7 +55,8 @@ Format:
   {{
     "question": "What is X?",
     "options": {{"A": "option1", "B": "option2", "C": "option3", "D": "option4"}},
-    "answer": "A"
+    "answer": "A",
+    "explanation": "This is correct because..."
   }}
 ]
 Study material:
