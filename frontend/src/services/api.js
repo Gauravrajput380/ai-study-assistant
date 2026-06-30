@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-  baseURL: 'http://localhost:8000'
+  baseURL: 'https://ai-study-assistant-backend-9q9f.onrender.com'
 })
 
 export const uploadFile = (formData) => API.post('/upload', formData)

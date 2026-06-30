@@ -84,7 +84,7 @@ export default function Home() {
     setResult('')
     setMcqs([])
     try {
-      const res = await axios.post('http://localhost:8000/mcq-quiz', { document_id: document.id })
+      const res = await axios.post('https://ai-study-assistant-backend-9q9f.onrender.com/mcq-quiz', { document_id: document.id })
       setQuizQuestions(res.data.questions)
       setQuizMode(true)
     } catch (err) {
