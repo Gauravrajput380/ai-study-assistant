@@ -35,7 +35,7 @@ export default function Home() {
       formData.append('file', file)
       const res = await uploadFile(formData)
       setDocument(res.data)
-    } catch (err) {
+    } catch (_err) {
       setUploadError('Upload failed. Please try again.')
     } finally {
       setUploading(false)
@@ -67,7 +67,7 @@ export default function Home() {
         const res = await explainTopic(topic)
         setResult(res.data.explanation)
       }
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to generate. Please try again.')
     } finally {
       setLoading(false)
@@ -87,7 +87,7 @@ export default function Home() {
       const res = await axios.post('https://ai-study-assistant-backend-9q9f.onrender.com/mcq-quiz', { document_id: document.id })
       setQuizQuestions(res.data.questions)
       setQuizMode(true)
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to generate quiz.')
     } finally {
       setLoading(false)
